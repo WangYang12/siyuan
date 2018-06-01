@@ -5,13 +5,24 @@
 <!--<link rel="icon" href="z.ico" type="image/x-icon"/> -->
 <style type="text/css">
 #div1  {
-height:520px;
+height:267px;
 width:100%;
 }
-
+#div5  {
+height:350px;
+width:100%;
+}
+#div6  {
+height:350px;
+width:100%;
+}
+#div4  {
+height:356px;
+width:100%;
+}
 #text{
 	position: relative;
-      top: 50%;
+      top: 35%;
 	
       transform: translateY(-50%);
 	  color : white;
@@ -19,9 +30,18 @@ width:100%;
 	   text-align:center;
 
 }
+#name{
+	position: relative;
+      top: 40%;
+	  color:rgba(186,100,150,0.3);
+      transform: translateY(-50%);
+	  font-size:2em;
+	   text-align:center;
+
+}
 #timer{
 	position: relative;
-      top: 60%;
+      top: 45%;
 	
       transform: translateY(-50%);
 	  color : black;
@@ -29,7 +49,10 @@ width:100%;
 	  text-align:center;
 
 }
+#div7{
+height:50px;
 
+}
 #div2  {
 background-color:white;
 height:500px;
@@ -39,25 +62,14 @@ weigh
 background-color:rgba(80,100,150,0.5);
 height:500px;
 }
-img{
-height:516px;
+.img1{
+height:267px;
+float:left
 }
-#img1{
-	
-	weight:400px
-	float:left
-  }
-  #img2{
-	weight:600px
-	float:left
-height:300px;
-
-  }
-  #img3{
-	float:left
-	weight:600px
-	
-  }
+.img2{
+height:356px;
+float:left
+}
 body{
 margin:0
 }
@@ -106,16 +118,25 @@ document.addEventListener('touchstart', function () {
 <body onload="leftTimer()">
 
 <div  id = "div1" >
-<audio src="ILoveYou.mp3"  id = "music" autoplay ></audio>
-	<img src = "2.jpg" id = "img1"></img>
-	<img src = "3.jpg" id = "img2"></img>
-	<img src = "4.jpg" id = "img3"></img>
+<audio src="ILoveYou.mp3"  id = "music" autoplay loop ></audio>
+	<img src = "2.jpg" class = "img1"></img>
+	<img src = "3.jpg" class = "img1"></img>
+	<img src = "4.jpg" class = "img1"></img>
 </div>
-
+<div id = "div5"></div>
 <div id = "div3">
 <div id = "text">距离看见你还有:</div> 
 <div id="timer"></div> 
 </div>
+<div id = "div6"></div>
+<div  id = "div4" >
+	<img src = "5.jpg" class = "img2"></img>
+	<img src = "6.jpg" class = "img2"></img>
+	<img src = "7.jpg" class = "img2"></img>
+</div>
+<div id = "div7">
+<div id = "name">I Know You Know I Love You</div> 
 
+</div>
 </body>
 </html>
