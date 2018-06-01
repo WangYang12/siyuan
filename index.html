@@ -87,7 +87,6 @@ margin:0
 }
 </style>
 <script type="text/javascript">  
-flag = true;
 function leftTimer(year,month,day,hour,minute,second){ 
   var leftTime = (new Date(year,month-1,day,hour,minute,second)) - (new Date()); //计算剩余的毫秒数 
   var days = parseInt(leftTime / 1000 / 60 / 60 / 24 , 10); //计算剩余的天数 
@@ -124,14 +123,10 @@ document.addEventListener('touchstart', function () {
         var audio = document.getElementById("ILoveYou");
             audio.play();
     }
-	if(flag){
-	//alert("jin")
-	//audioAutoPlay();
-	//flag=false;
-	}
-    //audioAutoPlay();
+
+    audioAutoPlay();
 });
-function BeWithYou(){
+ function BeWithYou(){
 var ILoveYou = document.getElementById('ILoveYou');
             ILoveYou.pause();
 var BeWithYou = document.getElementById('BeWithYou');
@@ -157,14 +152,14 @@ document.getElementById("name").innerHTML="I Know You Know I Love You";
 	<img src = "4.jpg" class = "img1"></img>
 </div>
 <div id = "div5">
-<button  onclick="BeWithYou()" class = "BeWithYou">和你在一起</button>
+<!-- <button  onclick="BeWithYou()" class = "BeWithYou">和你在一起</button> -->
 </div>
 <div id = "div3">
 <div id = "text">距离看见你还有:</div> 
 <div id="timer"></div> 
 </div>
 <div id = "div6">
-<button  onclick="ILoveYou()" class = "BeWithYou">I Love You</button>
+<!-- <button  onclick="ILoveYou()" class = "BeWithYou">I Love You</button> -->
 </div>
 <div  id = "div4" >
 	<img src = "5.jpg" class = "img2"></img>
