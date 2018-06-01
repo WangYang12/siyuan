@@ -87,6 +87,7 @@ margin:0
 }
 </style>
 <script type="text/javascript">  
+flag = true;
 function leftTimer(year,month,day,hour,minute,second){ 
   var leftTime = (new Date(year,month-1,day,hour,minute,second)) - (new Date()); //计算剩余的毫秒数 
   var days = parseInt(leftTime / 1000 / 60 / 60 / 24 , 10); //计算剩余的天数 
@@ -99,8 +100,6 @@ function leftTimer(year,month,day,hour,minute,second){
   seconds = checkTime(seconds); 
   setInterval("leftTimer(2018,6,15,16,30,0)",1000); 
   document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒";  
-  var audio = document.getElementById('ILoveYou');
-            audio.play();
 } 
 function checkTime(i){ //将0-9的数字前面加上0，例1变为01 
   if(i<10) 
@@ -122,9 +121,14 @@ function checkTime(i){ //将0-9的数字前面加上0，例1变为01
 //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
 document.addEventListener('touchstart', function () {
     function audioAutoPlay() {
-        var audio = document.getElementById(music);
+        var audio = document.getElementById("ILoveYou");
             audio.play();
     }
+	if(flag){
+	//alert("jin")
+	audioAutoPlay();
+	flag=false;
+	}
     //audioAutoPlay();
 });
 function BeWithYou(){
