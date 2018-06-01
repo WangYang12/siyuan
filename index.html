@@ -73,6 +73,18 @@ float:left
 body{
 margin:0
 }
+.BeWithYou{
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 25%;
+    width: 500px;
+    height: 100px;
+    background-color: rgba(173,190,322,0.8);
+    border-radius: 15px;
+    color: rgba(365,275,322,0.8);
+    font-size: 4em;
+}
 </style>
 <script type="text/javascript">  
 function leftTimer(year,month,day,hour,minute,second){ 
@@ -97,7 +109,7 @@ function checkTime(i){ //将0-9的数字前面加上0，例1变为01
 } 
   document.addEventListener('DOMContentLoaded', function () {
     function audioAutoPlay() {
-        var audio = document.getElementById('music');
+        var audio = document.getElementById('ILoveYou');
             audio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
             audio.play();
@@ -108,27 +120,44 @@ function checkTime(i){ //将0-9的数字前面加上0，例1变为01
 //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
 document.addEventListener('touchstart', function () {
     function audioAutoPlay() {
-        var audio = document.getElementById('audio');
+        var audio = document.getElementById(music);
             audio.play();
     }
-    audioAutoPlay();
+    //audioAutoPlay();
 });
+function BeWithYou(){
+var ILoveYou = document.getElementById('ILoveYou');
+            ILoveYou.pause();
+var BeWithYou = document.getElementById('BeWithYou');
+            BeWithYou.play();
+}
+function ILoveYou(){
+var BeWithYou = document.getElementById('BeWithYou');
+            BeWithYou.pause();
+var ILoveYou = document.getElementById('ILoveYou');
+            ILoveYou.play();
+}
 </script>
 </head>
 <body onload="leftTimer()">
 
 <div  id = "div1" >
-<audio src="ILoveYou.mp3"  id = "music" autoplay loop ></audio>
+<audio src="ILoveYou.mp3"  id = "ILoveYou" autoplay loop ></audio>
+<audio src="BeWithYou.mp3"  id = "BeWithYou" ></audio>
 	<img src = "2.jpg" class = "img1"></img>
 	<img src = "3.jpg" class = "img1"></img>
 	<img src = "4.jpg" class = "img1"></img>
 </div>
-<div id = "div5"></div>
+<div id = "div5">
+<button  onclick="BeWithYou()" class = "BeWithYou">和你在一起</button>
+</div>
 <div id = "div3">
 <div id = "text">距离看见你还有:</div> 
 <div id="timer"></div> 
 </div>
-<div id = "div6"></div>
+<div id = "div6">
+<button  onclick="ILoveYou()" class = "BeWithYou">I Love You</button>
+</div>
 <div  id = "div4" >
 	<img src = "5.jpg" class = "img2"></img>
 	<img src = "6.jpg" class = "img2"></img>
