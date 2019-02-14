@@ -88,7 +88,7 @@ margin:0
 </style>
 <script type="text/javascript">  
 function leftTimer(year,month,day,hour,minute,second){ 
-  var leftTime = (new Date(year,month-1,day,hour,minute,second)) - (new Date()); //计算剩余的毫秒数 
+  var leftTime = (new Date()) -(new Date(year,month-1,day,hour,minute,second)) ; //计算剩余的毫秒数 
   var days = parseInt(leftTime / 1000 / 60 / 60 / 24 , 10); //计算剩余的天数 
   var hours = parseInt(leftTime / 1000 / 60 / 60 % 24 , 10); //计算剩余的小时 
   var minutes = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟 
@@ -97,7 +97,7 @@ function leftTimer(year,month,day,hour,minute,second){
   hours = checkTime(hours); 
   minutes = checkTime(minutes); 
   seconds = checkTime(seconds); 
-  setInterval("leftTimer(2018,6,14,16,30,0)",1000); 
+  setInterval("leftTimer(2018,4,25,20,00,0)",1000); 
   document.getElementById("timer").innerHTML = days+"天" + hours+"小时" + minutes+"分"+seconds+"秒";  
 } 
 function checkTime(i){ //将0-9的数字前面加上0，例1变为01 
@@ -155,7 +155,7 @@ document.getElementById("name").innerHTML="I Know You Know I Love You";
 <button  onclick="BeWithYou()" class = "BeWithYou">和你在一起</button>
 </div>
 <div id = "div3">
-<div id = "text">距离看见你还有:</div> 
+<div id = "text">我们已经相爱:</div> 
 <div id="timer"></div> 
 </div>
 <div id = "div6">
