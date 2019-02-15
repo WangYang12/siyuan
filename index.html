@@ -9,6 +9,11 @@ height:394px;
 width:100%;
 display:none;
 }
+#div-tj  {
+height:417.8px;
+width:100%;
+display:none;
+}
 #div2  {
 background-color:white;
 height:500px;
@@ -64,6 +69,9 @@ background-color:rgba(255,0,0,0.5);
 }
 #div1-inner{
 	height:294px;
+}
+#div-tj-inner{
+	height:317.8px;
 }
 
 #text{
@@ -124,7 +132,7 @@ height:294px;
 float:left
 }
 .img2{
-height:356px;
+height:317.8px;
 float:left
 }
 body{
@@ -189,6 +197,12 @@ $("#div7").click(function(){
     $("#div1").slideToggle("slow");
   });
 });
+
+$(document).ready(function(){
+$("#div11").click(function(){
+    $("#div-tj").slideToggle("slow");
+  });
+});
 </script>
 </head>
 <body onload="leftTimer()">
@@ -209,13 +223,13 @@ $("#div7").click(function(){
 </div>
 <div  id = "div1" >
 	<div id = "div1-inner">
-	<img src = "2.jpg" class = "img1"></img>
-	<img src = "3.jpg" class = "img1"></img>
-	<img src = "7.jpg" class = "img1"></img>
+		<img src = "2.jpg" class = "img1"></img>
+		<img src = "3.jpg" class = "img1"></img>
+		<img src = "7.jpg" class = "img1"></img>
 	</div>
 	<div id = "div77" class = "div-title">
-<div id = "shi">夕阳无限好，只是近黄昏</div> 
-</div>
+		<div id = "shi">夕阳无限好，只是近黄昏</div> 
+	</div>
 </div>
 <div id = "div8" class = "div-title">
 <div id = "title">秦皇岛又玩</div> 
@@ -228,6 +242,16 @@ $("#div7").click(function(){
 </div>
 <div id = "div11" class = "div-title">
 <div id = "title">天津谢天笑</div> 
+</div>
+<div  id = "div-tj" >
+	<div id = "div-tj-inner">
+		<img src = "tianjin1.jpg" class = "img2"></img>
+		<img src = "tianjin2.jpg" class = "img2"></img>
+		<img src = "tianjin3.jpg" class = "img2"></img>
+	</div>
+	<div id = "div-tj-w" class = "div-title">
+		<div id = "shi">愿得一人心，白头不相离</div> 
+	</div>
 </div>
 <div id = "div12" class = "div-title">
 <div id = "title">丹东</div> 
