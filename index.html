@@ -9,16 +9,38 @@ height:267px;
 width:100%;
 }
 #div5  {
-height:350px;
+height:20px;
 width:100%;
 }
 #div6  {
-height:350px;
+height:100px;
 width:100%;
+background-color:rgba(250,128,144,0.5);
+}
+#div7  {
+height:100px;
+width:100%;
+background-color:rgba(255,169,122,0.5);
+}
+#div8  {
+height:100px;
+width:100%;
+background-color:rgba(255,165,0,0.5);
+}
+#div9  {
+height:100px;
+width:100%;
+background-color:rgba(255,140,0,0.5);
+}
+#div10  {
+height:100px;
+width:100%;
+background-color:rgba(255,127,80,0.5);
 }
 #div4  {
-height:356px;
+height:100px;
 width:100%;
+background-color:rgba(233,150,122,0.5);
 }
 #text{
 	position: relative;
@@ -27,6 +49,15 @@ width:100%;
       transform: translateY(-50%);
 	  color : white;
 	  font-size:5em;
+	   text-align:center;
+
+}
+#title{
+	position: relative;
+      top: 50%;
+	transform: translateY(-50%);
+	  color : green;
+	  font-size:3em;
 	   text-align:center;
 
 }
@@ -47,10 +78,6 @@ width:100%;
 	  color : black;
 	  font-size:5em;
 	  text-align:center;
-
-}
-#div7{
-height:50px;
 
 }
 #div2  {
@@ -126,49 +153,33 @@ document.addEventListener('touchstart', function () {
 
     //audioAutoPlay();
 });
- function BeWithYou(){
-var ILoveYou = document.getElementById('ILoveYou');
-            ILoveYou.pause();
-var BeWithYou = document.getElementById('BeWithYou');
-            BeWithYou.play();
-document.getElementById("name").innerHTML="和你在一起";
-}
-function ILoveYou(){
-var BeWithYou = document.getElementById('BeWithYou');
-            BeWithYou.pause();
-var ILoveYou = document.getElementById('ILoveYou');
-            ILoveYou.play();
-document.getElementById("name").innerHTML="I Know You Know I Love You";
-}
 </script>
 </head>
 <body onload="leftTimer()">
-
-<div  id = "div1" >
 <audio src="ILoveYou.mp3"  id = "ILoveYou" autoplay loop ></audio>
-<audio src="BeWithYou.mp3"  id = "BeWithYou" ></audio>
-	<img src = "2.jpg" class = "img1"></img>
-	<img src = "3.jpg" class = "img1"></img>
-	<img src = "4.jpg" class = "img1"></img>
-</div>
-<div id = "div5">
-<button  onclick="BeWithYou()" class = "BeWithYou">和你在一起</button>
-</div>
+
 <div id = "div3">
 <div id = "text">我们已经相爱:</div> 
 <div id="timer"></div> 
 </div>
-<div id = "div6">
-<button  onclick="ILoveYou()" class = "BeWithYou">I Love You</button>
+<div id = "div4">
+<div id = "title">北京草莓</div> 
 </div>
-<div  id = "div4" >
-	<img src = "5.jpg" class = "img2"></img>
-	<img src = "6.jpg" class = "img2"></img>
-	<img src = "7.jpg" class = "img2"></img>
+<div id = "div6">
+<div id = "title">秦皇岛</div> 
 </div>
 <div id = "div7">
-<div id = "name">I Know You Know I Love You</div> 
-
+<div id = "title">青岛</div> 
 </div>
+<div id = "div8">
+<div id = "title">天津</div> 
+</div>
+<div id = "div9">
+<div id = "title">丹东</div> 
+</div>
+<div id = "div10">
+<div id = "title">沈阳</div> 
+</div>
+
 </body>
 </html>
