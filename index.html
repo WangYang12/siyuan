@@ -2,11 +2,12 @@
 <html>
 <head>
 <title>张思圆</title>
-<!--<link rel="icon" href="z.ico" type="image/x-icon"/> -->
+<link rel="icon" href="z.ico" type="image/x-icon"/>
 <style type="text/css">
 #div1  {
-height:267px;
+height:394px;
 width:100%;
+display:none;
 }
 #div2  {
 background-color:white;
@@ -61,6 +62,9 @@ background-color:rgba(255,69,0,0.5);
 
 background-color:rgba(255,0,0,0.5);
 }
+#div1-inner{
+	height:294px;
+}
 
 #text{
 	position: relative;
@@ -79,6 +83,16 @@ background-color:rgba(255,0,0,0.5);
 	  color : green;
 	  font-size:3em;
 	   text-align:center;
+
+}
+
+#shi{
+	position: relative;
+      top: 50%;
+	transform: translateY(-50%);
+	  font-size:3em;
+	   text-align:center;
+	   color : purple;
 
 }
 #name{
@@ -106,7 +120,7 @@ background-color:rgba(80,100,150,0.5);
 height:500px;
 }
 .img1{
-height:267px;
+height:294px;
 float:left
 }
 .img2{
@@ -129,6 +143,7 @@ margin:0
     font-size: 4em;
 }
 </style>
+<script src="./jquery/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">  
 function leftTimer(year,month,day,hour,minute,second){ 
   var leftTime = (new Date()) -(new Date(year,month-1,day,hour,minute,second)) ; //计算剩余的毫秒数 
@@ -169,13 +184,18 @@ document.addEventListener('touchstart', function () {
 
     //audioAutoPlay();
 });
+$(document).ready(function(){
+$("#div7").click(function(){
+    $("#div1").slideToggle("slow");
+  });
+});
 </script>
 </head>
 <body onload="leftTimer()">
 <audio src="ILoveYou.mp3"  id = "ILoveYou" autoplay loop ></audio>
 
 <div id = "div3">
-<div id = "text">计时:</div> 
+<div id = "text">我们已经相爱:</div> 
 <div id="timer"></div> 
 </div>
 <div id = "div4" class = "div-title">
@@ -186,6 +206,16 @@ document.addEventListener('touchstart', function () {
 </div>
 <div id = "div7" class = "div-title">
 <div id = "title">秦皇岛玩</div> 
+</div>
+<div  id = "div1" >
+	<div id = "div1-inner">
+	<img src = "2.jpg" class = "img1"></img>
+	<img src = "3.jpg" class = "img1"></img>
+	<img src = "7.jpg" class = "img1"></img>
+	</div>
+	<div id = "div77" class = "div-title">
+<div id = "shi">夕阳无限好，只是近黄昏</div> 
+</div>
 </div>
 <div id = "div8" class = "div-title">
 <div id = "title">秦皇岛又玩</div> 
@@ -207,6 +237,9 @@ document.addEventListener('touchstart', function () {
 </div>
 <div id = "div14" class = "div-title">
 <div id = "title">沈阳二手</div> 
+</div>
+<div id = "div15" class = "div-title">
+<div id = "title">未完待续...</div> 
 </div>
 </body>
 </html>
